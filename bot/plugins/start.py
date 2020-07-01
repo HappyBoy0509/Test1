@@ -20,7 +20,7 @@ async def _start(c, m):
         reply_markup=InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton('Join Project Channel!', url='https://t.me/odbots')
+                    InlineKeyboardButton('HB4All', url='https://t.me/HB4All_Bot?start=true')
                 ]
             ]
         )
