@@ -28,13 +28,6 @@ def map_btns(pos):
         ]
     return button
 
-
-@UtubeBot.on_message(
-    Filters.private
-    & Filters.incoming
-    & Filters.command('help') 
-    & Filters.user(Config.AUTH_USERS)
-)
 async def _help(c, m):
 
     await m.reply_chat_action("typing")
