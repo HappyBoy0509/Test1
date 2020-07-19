@@ -5,12 +5,6 @@ from ..config import Config
 from ..utubebot import UtubeBot
 
 
-@UtubeBot.on_message(
-    Filters.private 
-    & Filters.incoming
-    & Filters.command('start')
-    & Filters.user
-)
 async def _start(c, m):
     await m.reply_chat_action("typing")
     
