@@ -11,12 +11,6 @@ from ..config import Config
 from ..utubebot import UtubeBot
 
 
-@UtubeBot.on_message(
-    Filters.private 
-    & Filters.incoming 
-    & Filters.command('upload') 
-    & Filters.user(Config.AUTH_USERS)
-)
 async def _upload(c, m):
     if not os.path.exists(Config.CRED_FILE):
         await m.reply_text(tr.NOT_AUTHENTICATED_MSG, True)
