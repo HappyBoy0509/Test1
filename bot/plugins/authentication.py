@@ -8,12 +8,6 @@ from ..translations import Messages as tr
 from ..utubebot import UtubeBot
 
 
-@UtubeBot.on_message(
-    Filters.private 
-    & Filters.incoming
-    & Filters.command('authorise')
-    & Filters.user(Config.AUTH_USERS)
-)
 async def _auth(c, m):
     if len(m.command) == 1:
         await m.reply_text(tr.NO_AUTH_CODE_MSG, True)
